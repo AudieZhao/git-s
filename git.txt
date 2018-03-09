@@ -18,3 +18,6 @@ ssh-keygen -t rsa -b 4096 -C "audiezhao@163.com"  //创建秘钥
 ssh-add ~/.ssh/id_rsa //
 
 git push //二次以上提交命令
+git clone https://github.com/AudieZhao/git-s.git  //下载项目
+
+git  diff  //查看修改了什么信息
