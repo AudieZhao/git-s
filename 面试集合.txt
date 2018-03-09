@@ -1,0 +1,191 @@
+1.jsp内置对象有哪些
+request
+response
+pageContaxt
+application 
+config
+session
+out
+page
+expection
+
+2.数据八大类型
+bety short long int
+double flort
+boolean
+char
+
+3.jequery选择器有哪些
+元素选择器、属性选择器、css选择器
+
+4.Spring里面的IOC和AOP都代表什么
+spring是一个web容器
+ioc代表控制反转，也叫依赖注入，只需要在spring配置文件中配置相应的bean，以及设置相关的属性，让spring容器来生成类的实例对象以及管理实例对象
+aop代表面向切面编程，可以添加日志功能，权限功能，和抛出异常
+实现aop技术主要分两大类：一是采用动态代理技术  二 是采用静态织入的方式
+
+5.spring 事务隔离级别 和事务特性
+读取未提交数据
+读取已提交数据
+可重复读
+串行化
+
+原子性 要么都成功，要么都失败
+一致性 事务执行的结果是从一个一致的状态，到另外一个一致的状态，当事务执行成功后，会变成另外一个状态
+隔离性 一个事务的执行过程不会影响到别的事务，各个事务之间是相互隔离的
+持续性 一个事务一旦提交，它对数据库的改变是永久性的
+
+6.简单介绍一下spring mvc
+是模型（model）—视图（view）—控制器（controller）的缩写，目的是为了系统的框架，分层更加清晰，可扩展性更强，降低系统的耦合度。
+
+7.Spring MVC和Struts的优缺点
+性能：springmvc比Struts要快
+Struts是类级别的拦截机制
+springMVC是方法级别的拦截机制
+intercepter的实现机制：Struts有自己的intercepter机制，springMVC是独立的AOP机制，这就导致Struts的配置文件量会比springMVC大，从理论上讲，springMVC的效率要大于Struts
+
+8.多数据源的事务控制
+
+9.spring注解
+
+@Controller  对应表现层的bean，也就是action
+@RequestMapping 匹配访问的url路径
+@Autowired  对类成员变量、方法及构造函数进行标注，完成自动装配的工作
+@RequestParam 将请求的参数绑定到方法中的参数上
+@RequestBody 指方法参数应该被绑定到HTTP请求Body上。
+
+10.访问一个页面，从访问到页面渲染的流程
+springmvc的工作流程 
+
+  1、用户发送请求至前端控制器DispatcherServlet。
+  
+  2、DispatcherServlet收到请求调用HandlerMapping处理器映射器。
+
+  3、处理器映射器根据请求url找到具体的处理器，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet。
+
+  4、DispatcherServlet通过HandlerAdapter处理器适配调用处理器
+
+  5、执行处理器(Controller，也叫后端控制器)。
+
+  6、Controller执行完成返回ModelAndView
+
+  7、HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet
+
+  8、DispatcherServlet将ModelAndView传给ViewReslover视图解析器
+
+  9、ViewReslover解析后返回具体View
+
+  10、DispatcherServlet对View进行渲染视图（即将模型数据填充至视图中）。
+
+  11、DispatcherServlet响应用户
+
+11.简单介绍一下MyBatis
+基于Java的持久性框架
+sql都写在xml文件里，方便统一管理
+解除了sql与代码的耦合
+支持编写动态sql
+支持对象与数据库字段的映射
+
+12.mybatis用于持久化层，比如我现在要在X表中插入一条数据，我这条数据是怎么插到库里面去的
+
+13.现在有一张1KW条记录的表，查询很慢，我要怎么提高这个速度
+建立索引
+做缓存
+
+14.like查询的时候为什么会比=慢很多
+like查询会抛弃使用索引
+
+15.存储过程
+
+16.final ,finally ,finalize 的区别
+final 用于声明属性，方法和类
+finally 用于异常处理语句结构的一部分，表示总是执行
+finalize 是object类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法
+
+17.循环都有哪些
+for  foreach while idretor
+
+18.集合都有哪些
+List
+Set
+Map
+
+19.工厂模式和单例模式
+
+20.冒泡排序
+
+public static void bubbleSort1(int [] a, int n){
+    int i, j;
+
+    for(i=0; i<n; i++){//表示n次排序过程。
+        for(j=1; j<n-i; j++){
+            if(a[j-1] > a[j]){//前面的数字大于后面的数字就交换
+                //交换a[j-1]和a[j]
+                int temp;
+                temp = a[j-1];
+                a[j-1] = a[j];
+                a[j]=temp;
+            }
+        }
+    }
+}
+
+21.二叉树
+
+22.ajax
+处理提交数据较多的情况下，可以序列化表单成json对象.serializeJson()
+
+23.String ，stringBuffer ，StringBulider
+String长度不可变
+StringBuffer跟StringBulider长度可变
+StringBuffer 是线程安全的
+
+24.重载和重写
+
+25.转发和重定向
+
+26.面向对象的特征
+封装 目的是实现软件部件的高内聚，低耦合，防止程序相互依赖而带来的变动影响
+继承 子类自动共享父类的数据和方法，提高了代码的可重用性和可扩展性
+多态 重写就是多态的表现
+抽象 找出事物的共性之处，然后将这些事物归为一类
+
+27.脏读，幻读，不可重复读
+脏读 是指一个事务正在访问数据，并且对事务进行了修改，而这个修改并没有提交到数据库，这时，另外一个事务也访问了这条数据
+不可重复读 在一个事务内，多次读取同一条数据，在这中间，另外一个事务修改了这条数据，可能导致事务读取的数据不一样
+幻读 第一个事务修改了表中的所有数据，第二个事务在表中插入了一条数据，这样会导致第一个修改的人，发现有数据没有修改
+
+28.什么是事务
+事务就是把多件事情当做一件事情来处理，要么一起成功，要么一起失败
+
+29.get跟post的区别
+get是从服务器获取数据，post是向服务器传送数据
+get传送的数据量小，不能大于2K，post传送的数据量大，一般不受限制
+get的安全性低，post的安全性高
+在做数据查询的时候建议用get，在做增删改的时候建议用post
+
+30.懒汉模式和恶汉模式
+public class Singleton {  
+    private static Singleton instance;  
+    private Singleton (){}  
+    public static synchronized Singleton getInstance() {  
+    if (instance == null) {  
+        instance = new Singleton();  
+    }  
+    return instance;  
+    }  
+} 
+//
+public class Singleton {  
+    private static Singleton instance = new Singleton();  
+    private Singleton (){}  
+    public static Singleton getInstance() {  
+    return instance;  
+    }  
+}  
+
+
+
+
+
+
