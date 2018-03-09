@@ -9,3 +9,8 @@ git config --list
 git下分三区 ，工作区   暂存区  仓库区
 git  add -A    //放到暂存区
 git commit -m “星期一”
+
+
+单文件添加到暂存区
+git add  文件名
+git status  检查所有的变动
