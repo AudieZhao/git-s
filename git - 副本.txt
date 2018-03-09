@@ -1,0 +1,23 @@
+创建用户
+git config --user.name "zhao"
+git config --user.email "115......"
+查看是否创成功
+git config --list
+
+
+
+git下分三区 ，工作区   暂存区  仓库区
+git  add -A    //放到暂存区
+git commit -m “备注”//放入仓库区并备注
+
+git add  文件名  //单文件添加到暂存区
+
+git status  //检查所有的变动
+git log //查看提交记录
+ssh-keygen -t rsa -b 4096 -C "audiezhao@163.com"  //创建秘钥
+ssh-add ~/.ssh/id_rsa //
+
+git push //二次以上提交命令
+git clone https://github.com/AudieZhao/git-s.git  //下载项目
+
+git  diff  //查看修改了什么信息
