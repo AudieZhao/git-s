@@ -8,9 +8,13 @@ git config --list
 
 git下分三区 ，工作区   暂存区  仓库区
 git  add -A    //放到暂存区
-git commit -m “星期一”
+git commit -m “备注”//放入仓库区并备注
 
+git add  文件名  //单文件添加到暂存区
 
-单文件添加到暂存区
-git add  文件名
-git status  检查所有的变动
+git status  //检查所有的变动
+git log //查看提交记录
+ssh-keygen -t rsa -b 4096 -C "audiezhao@163.com"  //创建秘钥
+ssh-add ~/.ssh/id_rsa //
+
+git push //二次以上提交命令
