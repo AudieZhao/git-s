@@ -14,6 +14,8 @@ git add  文件名  //单文件添加到暂存区
 
 git status  //检查所有的变动
 git log //查看提交记录
+git log --pretty=oneline//查看提交记录
+
 ssh-keygen -t rsa -b 4096 -C "audiezhao@163.com"  //创建秘钥
 ssh-add ~/.ssh/id_rsa //
 
@@ -21,3 +23,14 @@ git push //二次以上提交命令
 git clone https://github.com/AudieZhao/git-s.git  //下载项目
 
 git  diff  //查看修改了什么信息
+git reset --hard HEAD^ //回退版本，仅以个版本
+git reset --hard HEAD 版本号  //回退到某个版本
+
+git reflog  //所有操作
+git branch  //查看分支
+git branch  +分支名 //创建分支
+git checkout  +分支名 //跳转分支
+git merge  文件名  //合并主干
+git branch -d 分支名 //删除分支
+
+
